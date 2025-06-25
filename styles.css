@@ -426,7 +426,7 @@ button:active {
 
 @media screen and (max-width: 675px) {
   .hero-companies__list li {
-    flex-flow: column;
+    display: block;
   }
 
   html {
