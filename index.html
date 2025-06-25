@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital agency sample site</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="modal" class="modal">
+    <div id="modal__content" class="modal__content">
+      <button title="Close modal" aria-label="Close modal." id="modal__close-btn" class="modal__close-btn">
+        <svg aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
+        </svg>
+      </button>
+      <form class="contact__form">
+        <h2 class="contact__form-title">Contact us</h2>
+        <div class="contact__name-email-container">
+          <label for="contact__nif-input" class="visually-hidden">NIF</label>
+          <input pattern="^\d{8}[A-Za-z]$" id="contact__nif-input" class="contact__nif-input" autocomplete="nif" placeholder="NIF*" type="text" name="nif" aria-required="true" required>
+          <label for="contact__email-input" class="visually-hidden">Email</label>
+          <input pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" id="contact__email-input" class="contact__email-input" autocomplete="email" placeholder="Email*" type="email" name="email" aria-required="true" required>
+        </div>
+        <label for="contact__message-textarea" class="visually-hidden">Message</label>
+        <textarea class="contact__message-textarea" id="contact__message-textarea" placeholder="Your message here*" name="message" aria-required="true" required></textarea>
+        <button class="contact__submit-btn button" type="submit">Send Message</button>
+      </form>
+    </div>
+    <div id="modal__overlay" class="modal__overlay"></div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu">
+    <button aria-label="Close menu." title="Close menu" id="mobile-menu__close-btn" class="mobile-menu__close-btn appear-bg-from-center rounded">
+      <svg aria-hidden="true" focusable="false" role="presentation" class="mobile-menu__close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"></path>
+      </svg>
+    </button>
+    <nav>
+      <ul aria-label="Navigation links." class="mobile-menu__links-list">
+        <li>
+          <h2 class="mobile-menu__title">
+            <a class="mobile-menu__link slide-middle-out" href="#home">Home</a>
+          </h2>
+        </li>
+        <li>
+          <h2 class="mobile-menu__title">
+            <a class="mobile-menu__link slide-middle-out" href="#about">About</a>
+          </h2>
+        </li>
+        <li>
+          <h2 class="mobile-menu__title">
+            <a class="mobile-menu__link slide-middle-out" href="#testimonials">Testimonials</a>
+          </h2>
+        </li>
+        <li>
+          <h2 class="mobile-menu__title">
+            <a class="mobile-menu__link slide-middle-out" href="#contact">Contact</a>
+          </h2>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <header class="navbar">
+    <h2 class="navbar__title">DIGITAL AGENCY</h2>
+    <ul class="navbar__nav-list">
+      <li>
+        <a class="navbar__nav-list-link" href="#home-section">Home</a>
+      </li>
+      <li>
+        <a class="navbar__nav-list-link" href="#about">About</a>
+      </li>
+      <li>
+        <a class="navbar__nav-list-link" href="#testimonials">Testimonials</a>
+      </li>
+      <li>
+        <a class="navbar__nav-list-link" href="#contact">Contact</a>
+      </li>
+    </ul>
+    <button id="navbar__menu-btn" class="navbar__menu-btn">
+      <svg aria-hidden="true" focusable="false" role="presentation" class="navbar__menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <g fill="none">
+          <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+          <path fill="currentColor" d="M20 18a1 1 0 0 1 .117 1.993L20 20H4a1 1 0 0 1-.117-1.993L4 18zm0-7a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0-7a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2z" />
+        </g>
+      </svg>
+    </button>
+  </header>
+  <main>
+    <header class="hero-section" id="home">
+      <div class="hero-container">
+        <div class="hero__info">
+          <h1 class="hero__title">Building Digital Products, Brands & Experience</h1>
+          <p class="hero__description">Digital Agency is your easy-to-use online team management tool</p>
+          <button id="hero_contact-btn" class="button">CONTACT US</button>
+        </div>
+        <div class="hero__img-container">
+          <img class="hero__img" src="assets/images/business-people-discussing-business-idea.png" alt="">
+        </div>
+      </div>
+      <div class="hero-compainies-container">
+        <p class="hero-compainies__intro-text">Trusted By 4.000 + Companies</p>
+        <ul class="hero-companies__list">
+          <li>
+            <svg aria-hidden="true" focusable="false" role="presentation" class="hero-companies__list-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M17.9 10.9C14.7 9 9.35 8.8 6.3 9.75c-.5.15-1-.15-1.15-.6c-.15-.5.15-1 .6-1.15c3.55-1.05 9.4-.85 13.1 1.35c.45.25.6.85.35 1.3c-.25.35-.85.5-1.3.25m-.1 2.8c-.25.35-.7.5-1.05.25c-2.7-1.65-6.8-2.15-9.95-1.15c-.4.1-.85-.1-.95-.5s.1-.85.5-.95c3.65-1.1 8.15-.55 11.25 1.35c.3.15.45.65.2 1m-1.2 2.75c-.2.3-.55.4-.85.2c-2.35-1.45-5.3-1.75-8.8-.95c-.35.1-.65-.15-.75-.45c-.1-.35.15-.65.45-.75c3.8-.85 7.1-.5 9.7 1.1c.35.15.4.55.25.85M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2" />
+            </svg>
+            <h2>Spotify</h2>
+          </li>
+          <li>
+            <svg aria-hidden="true" focusable="false" role="presentation" class="hero-companies__list-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M6 15a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2h2zm1 0a2 2 0 0 1 2-2a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2a2 2 0 0 1-2-2zm2-8a2 2 0 0 1-2-2a2 2 0 0 1 2-2a2 2 0 0 1 2 2v2zm0 1a2 2 0 0 1 2 2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2a2 2 0 0 1 2-2zm8 2a2 2 0 0 1 2-2a2 2 0 0 1 2 2a2 2 0 0 1-2 2h-2zm-1 0a2 2 0 0 1-2 2a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2a2 2 0 0 1 2 2zm-2 8a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2v-2zm0-1a2 2 0 0 1-2-2a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2a2 2 0 0 1-2 2z" />
+            </svg>
+            <h2>Slack</h2>
+          </li>
+          <li>
+            <svg aria-hidden="true" focusable="false" role="presentation" class="hero-companies__list-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="currentColor" d="m3 6.2l5 3.19l5-3.19L8 3zm10 0l5 3.19l5-3.19L18 3zM3 12.55l5 3.19l5-3.19l-5-3.2zm15-3.2l-5 3.2l5 3.19l5-3.19zM8.03 16.8l5.01 3.2l5-3.2l-5-3.19z" />
+            </svg>
+            <h2>Dropbox</h2>
+          </li>
+          <li>
+            <svg aria-hidden="true" focusable="false" role="presentation" class="hero-companies__list-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g fill="none">
+                <g clip-path="url(#akarIconsZoomFill0)">
+                  <path fill="currentColor" fill-rule="evenodd" d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12S5.373 0 12 0s12 5.373 12 12M6 16.2h9V9.6a1.8 1.8 0 0 0-1.8-1.8h-9v6.6A1.8 1.8 0 0 0 6 16.2m10.2-2.4l3.6 2.4V7.8l-3.6 2.4z" clip-rule="evenodd" />
+                </g>
+                <defs>
+                  <clipPath id="akarIconsZoomFill0">
+                    <path fill="#fff" d="M0 0h24v24H0z" />
+                  </clipPath>
+                </defs>
+              </g>
+            </svg>
+            <h2>Zoom</h2>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section id="about"></section>
+    <section id="testimonials"></section>
+    <section id="contact"></section>
+  </main>
+  <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
