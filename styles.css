@@ -260,12 +260,14 @@ main {
 /* NAVBAR */
 
 .navbar {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  width: 100%;
-  align-items: center;
   max-width: var(--max-body-width);
   margin: 0 auto;
+}
+
+.navbar__nav {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
   padding: 2rem 0;
 }
 
